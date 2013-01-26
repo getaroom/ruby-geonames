@@ -23,6 +23,7 @@ module Geonames
                   :country_name, :population, :elevation, :feature_class,
                   :feature_class_name, :feature_code, :feature_code_name,
                   :latitude, :longitude, :distance,
-                  :admin_code_1, :admin_code_2, :admin_name_1, :admin_name_2
+                  :admin_code_1, :admin_code_2, :admin_name_1, :admin_name_2,
+                  :timezone
   end
 end

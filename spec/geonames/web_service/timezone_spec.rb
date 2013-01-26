@@ -13,6 +13,10 @@ module Geonames
       let(:longitude) { -78.882869834 }
 
       it { should be_a_kind_of(Timezone) }
+
+      it "should have the raw offset set" do
+        subject.raw_offset.should == -5.0
+      end
     end
   end
 end

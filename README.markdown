@@ -1,4 +1,4 @@
-# Geonames Ruby API
+# Geonames Ruby API [![Build Status](https://api.travis-ci.org/mceachen/ruby-geonames.png?branch=master)](https://travis-ci.org/mceachen/ruby-geonames)
 
 Ruby library for [Geonames Web Services](http://www.geonames.org/export/)
 

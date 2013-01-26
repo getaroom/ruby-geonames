@@ -1,0 +1,93 @@
+HTTP/1.1 200 OK
+Date: Sun, 12 Feb 2012 03:48:24 GMT
+Server: Apache/2.2.17 (Linux/SUSE)
+Cache-Control: no-cache
+Access-Control-Allow-Origin: *
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<geonames style="FULL">
+<totalResultsCount>3</totalResultsCount>
+<geoname>
+<toponymName>Marchtrenk</toponymName>
+<name>Marchtrenk</name>
+<lat>48.18333</lat>
+<lng>14.11667</lng>
+<geonameId>2771962</geonameId>
+<countryCode>AT</countryCode>
+<countryName>Austria</countryName>
+<fcl>P</fcl>
+<fcode>PPLA3</fcode>
+<fclName>city, village,...</fclName>
+<fcodeName>seat of a third-order administrative division</fcodeName>
+<population>11666</population>
+<alternateNames/>
+<elevation/>
+<continentCode>EU</continentCode>
+<adminCode1 ISO3166-2="4">04</adminCode1>
+<adminName1>Upper Austria</adminName1>
+<adminCode2>418</adminCode2>
+<adminName2>Wels-Land</adminName2>
+<adminCode3>41812</adminCode3>
+<adminName3>Marchtrenk</adminName3>
+<alternateName lang="link">http://en.wikipedia.org/wiki/Marchtrenk</alternateName>
+<alternateName lang="unlc">MRC</alternateName>
+<timezone dstOffset="2.0" gmtOffset="1.0">Europe/Vienna</timezone>
+<bbox>
+<west>14.09643</west>
+<north>48.19682</north>
+<east>14.13691</east>
+<south>48.16984</south>
+</bbox>
+<score>36.00358581542969</score>
+</geoname>
+<geoname>
+<toponymName>Marchtrenk</toponymName>
+<name>Marchtrenk</name>
+<lat>48.19569</lat>
+<lng>14.11846</lng>
+<geonameId>7872189</geonameId>
+<countryCode>AT</countryCode>
+<countryName>Austria</countryName>
+<fcl>A</fcl>
+<fcode>ADM3</fcode>
+<fclName>country, state, region,...</fclName>
+<fcodeName>third-order administrative division</fcodeName>
+<population>11753</population>
+<alternateNames/>
+<elevation/>
+<continentCode>EU</continentCode>
+<adminCode1 ISO3166-2="4">04</adminCode1>
+<adminName1>Upper Austria</adminName1>
+<adminCode2>418</adminCode2>
+<adminName2>Wels-Land</adminName2>
+<adminCode3>41812</adminCode3>
+<adminName3>Marchtrenk</adminName3>
+<timezone dstOffset="2.0" gmtOffset="1.0">Europe/Vienna</timezone>
+<score>33.33284378051758</score>
+</geoname>
+<geoname>
+<toponymName>Unterwerk Marchtrenk</toponymName>
+<name>Unterwerk Marchtrenk</name>
+<lat>48.20326</lat>
+<lng>14.1031</lng>
+<geonameId>7283014</geonameId>
+<countryCode>AT</countryCode>
+<countryName>Austria</countryName>
+<fcl>S</fcl>
+<fcode>PS</fcode>
+<fclName>spot, building, farm</fclName>
+<fcodeName>power station</fcodeName>
+<population/>
+<alternateNames/>
+<elevation/>
+<continentCode>EU</continentCode>
+<adminCode1 ISO3166-2="4">04</adminCode1>
+<adminName1>Upper Austria</adminName1>
+<adminCode2/>
+<adminName2/>
+<timezone dstOffset="2.0" gmtOffset="1.0">Europe/Vienna</timezone>
+<score>6.804038047790527</score>
+</geoname>
+</geonames>

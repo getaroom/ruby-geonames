@@ -22,6 +22,7 @@ require 'cgi'
 require 'geonames'
 require 'net/http'
 require 'rexml/document'
+require 'awesome_print'
 
 module Geonames
   module WebService
@@ -37,6 +38,12 @@ module Geonames
 
     def get_element_child_int(element, child)
       element.elements[child][0].to_s.to_i unless element.elements[child].nil?
+    end
+
+    def get_element_child_alternates(element, child)
+      alternates = {}
+      element.each_element_with_attribute('lang',nil,0,child) { |e| alternates[e.attribute('lang').value] = e.text }
+      alternates
     end
 
     def element_to_postal_code(element)
@@ -78,7 +85,7 @@ module Geonames
       toponym = Toponym.new
 
       toponym.name               = get_element_child_text(element,  'name')
-      toponym.alternate_names    = get_element_child_text(element,  'alternateNames')
+      toponym.alternate_names    = get_element_child_alternates(element, 'alternateName')
       toponym.latitude           = get_element_child_float(element, 'lat')
       toponym.longitude          = get_element_child_float(element, 'lng')
       toponym.geoname_id         = get_element_child_text(element,  'geonameId')
@@ -95,6 +102,7 @@ module Geonames
       toponym.admin_code_2       = get_element_child_text(element,  'adminCode2')
       toponym.admin_name_1       = get_element_child_text(element,  'adminName1')
       toponym.admin_name_2       = get_element_child_text(element,  'adminName2')
+      toponym.timezone           = get_element_child_text(element,  'timezone')
 
       toponym
     end
@@ -153,7 +161,7 @@ module Geonames
       url << search_criteria.to_query_params_string
 
       res = make_request(url, args)
-
+      
       doc = REXML::Document.new res.body
 
       doc.elements.each("geonames/code") do |element|
@@ -181,13 +189,14 @@ module Geonames
       postal_codes
     end
 
-    def find_nearby_place_name(lat, long, *args)
+    def find_toponym(action, lat, long, query_options, args)
       places = []
 
-      url = "/findNearbyPlaceName?a=a"
+      url = "/#{action}"
 
-      url << "&lat=" + lat.to_s
+      url << "?lat=" + lat.to_s
       url << "&lng=" + long.to_s
+      query_options.each { |k,v| url << "&#{k}=#{v}" }
 
       res = make_request(url, args)
 
@@ -198,6 +207,14 @@ module Geonames
       end
 
       places
+    end
+
+    def find_nearby_place_name(lat, long, query_options = {} , *args)
+      find_toponym("findNearbyPlaceName", lat, long, query_options, args)
+    end
+
+    def find_nearby(lat, long, query_options = {}, *args)
+      find_toponym("findNearby", lat, long, query_options, args)
     end
 
     def find_nearest_intersection(lat, long, *args)
@@ -219,6 +236,15 @@ module Geonames
       intersection
     end
 
+    def hierarchy(geonameId, *args)
+      url = "/hierarchy?geonameId=#{geonameId.to_i}"
+      res = make_request(url, args)
+      doc = REXML::Document.new res.body
+      doc.elements.collect("geonames/geoname") do |element|
+        element_to_toponym(element)
+      end
+    end
+
     def timezone(lat, long, *args)
       res = make_request("/timezone?lat=#{lat.to_s}&lng=#{long.to_s}", args)
       doc = REXML::Document.new res.body
@@ -228,6 +254,7 @@ module Geonames
         timezone.timezone_id = get_element_child_text(element,  'timezoneId')
         timezone.gmt_offset  = get_element_child_float(element, 'gmtOffset')
         timezone.dst_offset  = get_element_child_float(element, 'dstOffset')
+        timezone.raw_offset  = get_element_child_float(element, 'rawOffset')
       end
 
       timezone
@@ -237,6 +264,7 @@ module Geonames
       url = Geonames.base_url + path_and_query
       url += "&username=#{Geonames.username}" if Geonames.username
       url += "&lang=#{Geonames.lang}"
+      url += "&token=#{Geonames.token}"       if Geonames.token
 
       options = { :open_timeout => 60, :read_timeout => 60 }
       options.update(args.last.is_a?(Hash) ? args.pop : {})
@@ -421,6 +449,7 @@ module Geonames
       url << "&maxRows="         + CGI.escape(search_criteria.max_rows)         unless search_criteria.max_rows.nil?
       url << "&startRow="        + CGI.escape(search_criteria.start_row)        unless search_criteria.start_row.nil?
       url << "&style="           + CGI.escape(search_criteria.style)            unless search_criteria.style.nil?
+      url << "&isNameRequired="  + CGI.escape(search_criteria.is_name_required) unless search_criteria.is_name_required.nil?
       url << search_criteria.feature_codes.map {|fcode| "&fcode=" + CGI.escape(fcode) }.join unless search_criteria.feature_codes.nil?
 
       res = make_request(url, args)

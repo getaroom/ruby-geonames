@@ -24,8 +24,12 @@ module Geonames
     attr_accessor :postal_code, :place_name, :country_code,
                   :latitude, :longitude, :style,
                   :max_rows,  :is_or_operator, :radius
+    
+    def initialize(params={})
+      params.each do |attr, value|
+        self.public_send("#{attr}=", value)
+      end if params
 
-    def initialize
       @is_or_operator = false
     end
 

@@ -1,0 +1,48 @@
+HTTP/1.1 200 OK
+Date: Sun, 12 Feb 2012 03:48:24 GMT
+Server: Apache/2.2.17 (Linux/SUSE)
+Cache-Control: no-cache
+Access-Control-Allow-Origin: *
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<geonames style="FULL">
+<totalResultsCount>5929</totalResultsCount>
+<geoname>
+<toponymName>Oberösterreich</toponymName>
+<name>Upper Austria</name>
+<lat>48.25</lat>
+<lng>14</lng>
+<geonameId>2769848</geonameId>
+<countryCode>AT</countryCode>
+<countryName>Austria</countryName>
+<fcl>A</fcl>
+<fcode>ADM1</fcode>
+<fclName>country, state, region,...</fclName>
+<fcodeName>first-order administrative division</fcodeName>
+<population>1400851</population>
+<alternateNames>Alta Austria,Alta Àustria,Haute-Autriche,Oberoesterreich,Oberösterreich,Opper-Oostenrijk,Upper Austria</alternateNames>
+<elevation/>
+<continentCode>EU</continentCode>
+<adminCode1 ISO3166-2="4">04</adminCode1>
+<adminName1>Upper Austria</adminName1>
+<adminCode2/>
+<adminName2/>
+<alternateName lang="ca">Alta Àustria</alternateName>
+<alternateName lang="de">Oberösterreich</alternateName>
+<alternateName lang="en">Upper Austria</alternateName>
+<alternateName lang="fr">Haute-Autriche</alternateName>
+<alternateName lang="it">Alta Austria</alternateName>
+<alternateName lang="link">http://en.wikipedia.org/wiki/Upper_Austria</alternateName>
+<alternateName lang="nl">Opper-Oostenrijk</alternateName>
+<timezone dstOffset="2.0" gmtOffset="1.0">Europe/Vienna</timezone>
+<bbox>
+<west>12.74774</west>
+<north>48.77212</north>
+<east>14.98952</east>
+<south>47.46217</south>
+</bbox>
+<score>28.577102661132812</score>
+</geoname>
+</geonames>

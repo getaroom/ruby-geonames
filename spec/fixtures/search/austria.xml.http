@@ -1,0 +1,146 @@
+HTTP/1.1 200 OK
+Date: Sun, 12 Feb 2012 03:48:24 GMT
+Server: Apache/2.2.17 (Linux/SUSE)
+Cache-Control: no-cache
+Access-Control-Allow-Origin: *
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<geonames style="FULL">
+<totalResultsCount>43797</totalResultsCount>
+<geoname>
+<toponymName>Republic of Austria</toponymName>
+<name>Austria</name>
+<lat>47.33333</lat>
+<lng>13.33333</lng>
+<geonameId>2782113</geonameId>
+<countryCode>AT</countryCode>
+<countryName>Austria</countryName>
+<fcl>A</fcl>
+<fcode>PCLI</fcode>
+<fclName>country, state, region,...</fclName>
+<fcodeName>independent political entity</fcodeName>
+<population>8205000</population>
+<alternateNames>'Aositulia,An Ostair,Ao,Aostria,Aotrisy,Austerrike,Austri,Austria,Austria nutome,Austriche,Austrija,Austrujo,Austrya,Austurriki,Austurríki,Ausztria,Autriche,Avstria,Avstrija,Avstriya,Avusturya,Awsteriya,Awstria,Awstrija,Awusituriya,Aŭstrujo,Eysturriki,Eysturríki,Itaevalta,Itävalta,Nuortariika,OEoesterriek,OEsterreich,OEsterrike,Oostenrijk,Oostenryk,Orileede Asitiria,Orílẹ́ède Asítíríà,Osterrike,Ostiriya,Ostrig,Ostrigi,Otilisi,Otiriis,Otirishe,Otirisi,Otrisi,Otrîsi,Rakousko,Rakusko,Rakúsko,Republic of Austria,Republica d'Austria,Republik Osterreich,Republik Österreich,República d'Àustria,alnmsa,ao de li,astiriya,astri'a,astriya,atrysh,i-Austria,oseuteulia,ostriya,osutoria,osutoria gong he guo,xxsteriy,Àustria,Áo,Áustria,Österreich,Österrike,Öösterriek,Østerrike,Østrig,Østrigi,Ɔstria,ʻAositulia,Αυστρία,Австрия,Австрија,Австрія,Аустрија,Аўстрыя,Ավստրիա,אוסטריה,آسٹریا,اتريش,اتریش,النمسا,نەمسا,अष्ट्रिया,ऑस्ट्रिया,অস্ট্রিয়া,অস্ট্রিয়া,ઑસ્ટ્રિયા,ଅଷ୍ଟ୍ରିଆ,ஆஸ்திரியா,ఆస్ట్రియా,ಆಸ್ಟ್ರಿಯಾ,ഓസ്ട്രിയ,ඔස්ට්‍රියාව,ออสเตรีย,ອົອດສະເຕຼຍ,ཨས་ཊི་ཡ,ཨསྟྲི་ཡ།,ဩစတြီးယား,ავსტრია,ኦስትሪያ,អូទ្រីស,オーストリア,オーストリア共和国,奥地利,오스트리아</alternateNames>
+<elevation/>
+<continentCode>EU</continentCode>
+<adminCode1>00</adminCode1>
+<adminName1/>
+<adminCode2/>
+<adminName2/>
+<alternateName lang="af">Oostenryk</alternateName>
+<alternateName lang="ak">Ɔstria</alternateName>
+<alternateName lang="am">ኦስትሪያ</alternateName>
+<alternateName lang="an">Austria</alternateName>
+<alternateName lang="ar">النمسا</alternateName>
+<alternateName lang="az">Avstriya</alternateName>
+<alternateName lang="be">Аўстрыя</alternateName>
+<alternateName lang="bg">Австрия</alternateName>
+<alternateName lang="bm">Otirisi</alternateName>
+<alternateName lang="bn">অস্ট্রিয়া</alternateName>
+<alternateName lang="bo">ཨསྟྲི་ཡ།</alternateName>
+<alternateName lang="br">Aostria</alternateName>
+<alternateName lang="bs">Austrija</alternateName>
+<alternateName lang="ca">Àustria</alternateName>
+<alternateName lang="cs">Rakousko</alternateName>
+<alternateName lang="cy">Awstria</alternateName>
+<alternateName lang="da">Østrig</alternateName>
+<alternateName lang="de">Österreich</alternateName>
+<alternateName lang="dz">ཨས་ཊི་ཡ</alternateName>
+<alternateName lang="ee">Austria nutome</alternateName>
+<alternateName lang="el">Αυστρία</alternateName>
+<alternateName lang="en">Austria</alternateName>
+<alternateName lang="eo">Aŭstrujo</alternateName>
+<alternateName lang="es">Austria</alternateName>
+<alternateName lang="et">Austria</alternateName>
+<alternateName lang="eu">Austria</alternateName>
+<alternateName lang="fa">اتريش</alternateName>
+<alternateName lang="ff">Otiriis</alternateName>
+<alternateName lang="fi">Itävalta</alternateName>
+<alternateName lang="fo">Eysturríki</alternateName>
+<alternateName lang="fr">Autriche</alternateName>
+<alternateName lang="ga">An Ostair</alternateName>
+<alternateName lang="gl">Austria</alternateName>
+<alternateName lang="gu">ઑસ્ટ્રિયા</alternateName>
+<alternateName lang="ha">Ostiriya</alternateName>
+<alternateName lang="he">אוסטריה</alternateName>
+<alternateName lang="hi">ऑस्ट्रिया</alternateName>
+<alternateName lang="hr">Austrija</alternateName>
+<alternateName lang="hu">Ausztria</alternateName>
+<alternateName lang="hy">Ավստրիա</alternateName>
+<alternateName lang="ia">Austria</alternateName>
+<alternateName lang="id">Austria</alternateName>
+<alternateName lang="is">Austurríki</alternateName>
+<alternateName lang="it">Austria</alternateName>
+<alternateName lang="ja">オーストリア共和国</alternateName>
+<alternateName lang="ka">ავსტრია</alternateName>
+<alternateName lang="ki">Austria</alternateName>
+<alternateName lang="kk">Австрия</alternateName>
+<alternateName lang="kl">Østrigi</alternateName>
+<alternateName lang="km">អូទ្រីស</alternateName>
+<alternateName lang="kn">ಆಸ್ಟ್ರಿಯಾ</alternateName>
+<alternateName lang="ko">오스트리아</alternateName>
+<alternateName lang="ku">نەمسا</alternateName>
+<alternateName lang="lg">Awusituriya</alternateName>
+<alternateName lang="link">http://en.wikipedia.org/wiki/Austria</alternateName>
+<alternateName lang="ln">Otilisi</alternateName>
+<alternateName lang="lo">ອົອດສະເຕຼຍ</alternateName>
+<alternateName lang="lt">Austrija</alternateName>
+<alternateName lang="lu">Otilisi</alternateName>
+<alternateName lang="lv">Austrija</alternateName>
+<alternateName lang="mg">Aotrisy</alternateName>
+<alternateName lang="mk">Австрија</alternateName>
+<alternateName lang="ml">ഓസ്ട്രിയ</alternateName>
+<alternateName lang="mr">ऑस्ट्रिया</alternateName>
+<alternateName lang="ms">Austria</alternateName>
+<alternateName lang="mt">Awstrija</alternateName>
+<alternateName lang="my">ဩစတြီးယား</alternateName>
+<alternateName lang="nb">Østerrike</alternateName>
+<alternateName lang="nd">Austria</alternateName>
+<alternateName lang="nds">Öösterriek</alternateName>
+<alternateName lang="ne">अष्ट्रिया</alternateName>
+<alternateName lang="nl">Oostenrijk</alternateName>
+<alternateName lang="nn">Austerrike</alternateName>
+<alternateName lang="oc">Àustria</alternateName>
+<alternateName lang="or">ଅଷ୍ଟ୍ରିଆ</alternateName>
+<alternateName lang="pl">Austria</alternateName>
+<alternateName lang="ps">اتریش</alternateName>
+<alternateName lang="pt">Áustria</alternateName>
+<alternateName lang="rm">Austria</alternateName>
+<alternateName lang="rn">Otirishe</alternateName>
+<alternateName lang="ro">Austria</alternateName>
+<alternateName lang="ru">Австрия</alternateName>
+<alternateName lang="se">Nuortariika</alternateName>
+<alternateName lang="sg">Otrîsi</alternateName>
+<alternateName lang="si">ඔස්ට්‍රියාව</alternateName>
+<alternateName lang="sk">Rakúsko</alternateName>
+<alternateName lang="sl">Avstrija</alternateName>
+<alternateName lang="sn">Austria</alternateName>
+<alternateName lang="so">Awsteriya</alternateName>
+<alternateName lang="sq">Austri</alternateName>
+<alternateName lang="sr">Аустрија</alternateName>
+<alternateName lang="sv">Österrike</alternateName>
+<alternateName lang="sw">Austria</alternateName>
+<alternateName lang="ta">ஆஸ்திரியா</alternateName>
+<alternateName lang="te">ఆస్ట్రియా</alternateName>
+<alternateName lang="th">ออสเตรีย</alternateName>
+<alternateName lang="ti">ኦስትሪያ</alternateName>
+<alternateName lang="to">ʻAositulia</alternateName>
+<alternateName lang="tr">Avusturya</alternateName>
+<alternateName lang="uk">Австрія</alternateName>
+<alternateName lang="ur">آسٹریا</alternateName>
+<alternateName lang="vi">Áo</alternateName>
+<alternateName lang="yo">Orílẹ́ède Asítíríà</alternateName>
+<alternateName lang="zh">奥地利</alternateName>
+<alternateName lang="zu">i-Austria</alternateName>
+<timezone dstOffset="2.0" gmtOffset="1.0">Europe/Vienna</timezone>
+<bbox>
+<west>9.53592</west>
+<north>49.01706</north>
+<east>17.16272</east>
+<south>46.37803</south>
+</bbox>
+<score>156.93548583984375</score>
+</geoname>
+</geonames>

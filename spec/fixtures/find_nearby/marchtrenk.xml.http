@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Sun, 12 Feb 2012 03:48:24 GMT
+Server: Apache/2.2.17 (Linux/SUSE)
+Cache-Control: no-cache
+Access-Control-Allow-Origin: *
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<geonames>
+<geoname>
+<toponymName>Marchtrenk</toponymName>
+<name>Marchtrenk</name>
+<lat>48.18333</lat>
+<lng>14.11667</lng>
+<geonameId>2771962</geonameId>
+<countryCode>AT</countryCode>
+<countryName>Austria</countryName>
+<fcl>P</fcl>
+<fcode>PPLA3</fcode>
+<fclName>city, village,...</fclName>
+<fcodeName>seat of a third-order administrative division</fcodeName>
+<population>11666</population>
+<alternateNames/>
+<elevation>0</elevation>
+<continentCode>EU</continentCode>
+<adminCode1 ISO3166-2="4">04</adminCode1>
+<adminName1>Upper Austria</adminName1>
+<adminCode2>418</adminCode2>
+<adminName2>Wels-Land</adminName2>
+<adminCode3>41812</adminCode3>
+<adminName3>Marchtrenk</adminName3>
+<alternateName lang="link">http://en.wikipedia.org/wiki/Marchtrenk</alternateName>
+<timezone dstOffset="2.0" gmtOffset="1.0">Europe/Vienna</timezone>
+<distance>0.61778</distance>
+</geoname>
+</geonames>

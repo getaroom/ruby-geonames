@@ -19,11 +19,12 @@
 
 module Geonames
   class Config
-    @@default_base_url = "http://ws.geonames.org"
+    @@default_base_url = "http://api.geonames.org"
     @@default_lang     = "en"
     @@default_username = nil
+    @@default_token    = nil
 
-    attr_writer :base_url, :lang, :username
+    attr_writer :base_url, :lang, :username, :token
 
     def base_url
       @base_url || @@default_base_url
@@ -35,6 +36,10 @@ module Geonames
 
     def username
       @username || @@default_username
+    end
+
+    def token
+      @token || @@default_token
     end
   end
 end

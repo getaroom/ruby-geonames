@@ -33,7 +33,7 @@ module Geonames
   autoload :WebService,               'geonames/web_service'
   autoload :WikipediaArticle,         'geonames/wikipedia_article'
 
-  GEONAMES_SERVER = "http://ws.geonames.org"
+  GEONAMES_SERVER = "http://ws.geonames.net"
   USER_AGENT      = "geonames ruby webservice client #{VERSION}"
 
   class << self
@@ -41,7 +41,7 @@ module Geonames
       Thread.current[:geonames_config] ||= Geonames::Config.new
     end
 
-    %w(base_url lang username).each do |method|
+    %w(base_url lang username token).each do |method|
       module_eval <<-DELEGATORS, __FILE__, __LINE__ + 1
         def #{method}
           config.#{method}

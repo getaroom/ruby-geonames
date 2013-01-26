@@ -19,7 +19,7 @@
 
 module Geonames
   class Timezone
-    attr_accessor :timezone_id, :gmt_offset, :dst_offset
+    attr_accessor :timezone_id, :gmt_offset, :dst_offset, :raw_offset
 
     def tzinfo
       TZInfo::Timezone.get(timezone_id)
