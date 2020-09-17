@@ -19,7 +19,7 @@
 
 module Geonames
   class Config
-    @@default_base_url = "http://ws.geonames.org"
+    @@default_base_url = "http://api.geonames.org"
     @@default_lang     = "en"
     @@default_username = nil
 

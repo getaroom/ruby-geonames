@@ -33,7 +33,7 @@ module Geonames
   autoload :WebService,               'geonames/web_service'
   autoload :WikipediaArticle,         'geonames/wikipedia_article'
 
-  GEONAMES_SERVER = "http://ws.geonames.org"
+  GEONAMES_SERVER = "http://api.geonames.org"
   USER_AGENT      = "geonames ruby webservice client #{VERSION}"
 
   class << self
