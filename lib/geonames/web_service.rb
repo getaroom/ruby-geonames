@@ -224,6 +224,13 @@ module Geonames
       doc = REXML::Document.new res.body
       timezone = Timezone.new
 
+      if doc.elements["geonames/timezone"].nil? && doc.elements["geonames/status"].present?
+        error_code = doc.elements["geonames/status"].attributes["value"]
+        error_message = doc.elements["geonames/status"].attributes["message"]
+        error = Geonames::Error.from_code(error_code.to_i, "#{error_message} for lat/long #{lat}/#{long}")
+        raise error
+      end
+
       doc.elements.each("geonames/timezone") do |element|
         timezone.timezone_id = get_element_child_text(element,  'timezoneId')
         timezone.gmt_offset  = get_element_child_float(element, 'gmtOffset')

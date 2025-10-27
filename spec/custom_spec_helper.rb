@@ -1,10 +1,5 @@
 require 'rubygems'
 require 'bundler/setup'
-require 'pry'
-
-# Requires supporting files with custom matchers and macros, etc,
-# in ./support/ and its subdirectories.
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f }
 
 RSpec.configure do |config|
   config.mock_with :rspec
@@ -15,7 +10,10 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
   config.shared_context_metadata_behavior = :apply_to_host_groups
-  config.include FixtureHelper
 end
+
+# Requires supporting files with custom matchers and macros, etc,
+# in ./support/ and its subdirectories.
+Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f }
 
 require 'geonames'

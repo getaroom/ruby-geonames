@@ -4,9 +4,9 @@ module Geonames
   describe WebService do
     describe ".country_code" do
       subject { WebService.country_code(latitude, longitude) }
-      let(:response) { File.read File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'countrycode', fixture) }
+      let(:response) { fixture_content(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'countrycode', fixture)) }
 
-      before { FakeWeb.register_uri :get, /\/countrycode\?.*lat=#{latitude}&lng=#{longitude}/, :response => response }
+      before { WebMock.stub_request(:get, /\/countrycode\?.*lat=#{latitude}&lng=#{longitude}/).to_return(body: response) }
       let(:fixture) { "canada.xml.http" }
 
       let(:latitude)  { +43.900120387 }
@@ -16,7 +16,7 @@ module Geonames
 
       it "returns Toponym instances" do
         subject.each do |element|
-          element.should be_a_kind_of Toponym
+          expect(element).to be_a_kind_of Toponym
         end
       end
     end
