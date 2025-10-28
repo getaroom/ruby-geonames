@@ -4,7 +4,7 @@ module Geonames
   describe WebService do
     describe ".timezone" do
       subject { WebService.timezone(latitude, longitude) }
-      let(:response) { fixture_content(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'timezone', fixture)) }
+      let(:response) { File.read(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'timezone', fixture)) }
 
       before { WebMock.stub_request(:get, /\/timezone\?.*lat=#{latitude}&lng=#{longitude}/).to_return(body: response) }
       let(:fixture) { "america_toronto.xml.http" }

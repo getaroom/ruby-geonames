@@ -4,7 +4,7 @@ module Geonames
   describe WebService do
     describe ".postal_code_search" do
       subject { WebService.postal_code_search(criteria) }
-      let(:response) { fixture_content(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'postal_code_search', fixture)) }
+      let(:response) { File.read(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'postal_code_search', fixture)) }
 
       context "lookup by place name" do
         before { WebMock.stub_request(:get, /\/postalCodeSearch\?.*&placename=Oshawa/).to_return(body: response) }

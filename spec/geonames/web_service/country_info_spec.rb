@@ -5,7 +5,7 @@ module Geonames
     describe ".country_info" do
       subject { country_info }
       let(:country_info) { WebService.country_info(country_code) }
-      let(:response) { fixture_content(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'country_info', fixture)) }
+      let(:response) { File.read(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'country_info', fixture)) }
 
       context "with a country code of 'TH'" do
         before { WebMock.stub_request(:get, /\/countryInfo\?.*&country=#{country_code}/).to_return(body: response) }

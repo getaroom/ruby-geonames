@@ -4,7 +4,7 @@ module Geonames
   describe WebService do
     describe ".country_subdivision" do
       subject { WebService.country_subdivision(latitude, longitude) }
-      let(:response) { fixture_content(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'country_subdivision', fixture)) }
+      let(:response) { File.read(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'country_subdivision', fixture)) }
 
       before { WebMock.stub_request(:get, /\/countrySubdivision\?.*lat=#{latitude}&lng=#{longitude}/).to_return(body: response) }
       let(:fixture) { "ontario.xml.http" }

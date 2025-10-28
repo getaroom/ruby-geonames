@@ -4,7 +4,7 @@ module Geonames
   describe WebService do
     describe ".find_bounding_box_wikipedia" do
       subject { WebService.find_bounding_box_wikipedia({ :north => north, :east => east, :south => south, :west => west }) }
-      let(:response) { fixture_content(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'wikipedia_bounding_box', fixture)) }
+      let(:response) { File.read(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'wikipedia_bounding_box', fixture)) }
 
       # TODO Why doesn't mocking the following regex work?
       # /\/wikipediaBoundingBox\?.*north=#{north}&east=#{east}&south=#{south}&west=#{west}/

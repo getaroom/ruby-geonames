@@ -4,7 +4,7 @@ module Geonames
   describe WebService do
     describe ".find_nearby_place_name" do
       subject { WebService.find_nearby_place_name(latitude, longitude) }
-      let(:response) { fixture_content(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'find_nearby_place_name', fixture)) }
+      let(:response) { File.read(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'find_nearby_place_name', fixture)) }
 
       before { WebMock.stub_request(:get, /\/findNearbyPlaceName\?.*lat=#{latitude}&lng=#{longitude}/).to_return(body: response) }
       let(:fixture) { "oshawa.xml.http" }
