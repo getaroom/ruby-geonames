@@ -1,9 +1,9 @@
-require 'fakeweb'
+require 'webmock/rspec'
 
-FakeWeb.allow_net_connect = false
+WebMock.disable_net_connect!(allow_localhost: true)
 
 RSpec.configure do |config|
   config.before(:each) do
-    FakeWeb.clean_registry
+    WebMock.reset!
   end
 end

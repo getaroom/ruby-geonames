@@ -22,6 +22,7 @@ module Geonames
   autoload :Config,                   'geonames/config'
   autoload :CountryInfo,              'geonames/country_info'
   autoload :CountrySubdivision,       'geonames/country_subdivision'
+  autoload :Error,                    'geonames/error'
   autoload :Intersection,             'geonames/intersection'
   autoload :PostalCode,               'geonames/postal_code'
   autoload :PostalCodeSearchCriteria, 'geonames/postal_code_search_criteria'

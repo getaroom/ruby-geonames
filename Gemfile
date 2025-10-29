@@ -1,7 +1,9 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
 gemspec
 
-group :development do
-  gem "rcov", "~> 0.9.9", :platforms => :ruby_18
+group :development, :test do
+  gem "pry-rails"
+  gem "simplecov", "~> 0.21"
 end
+gem "rexml"

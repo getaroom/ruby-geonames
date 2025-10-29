@@ -4,9 +4,9 @@ module Geonames
   describe WebService do
     describe ".find_nearby_wikipedia" do
       subject { WebService.find_nearby_wikipedia({ :lat => latitude, :long => longitude }) }
-      let(:response) { File.read File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'find_nearby_wikipedia', fixture) }
+      let(:response) { File.read(File.join(File.dirname(__FILE__), '..', '..', 'fixtures', 'find_nearby_wikipedia', fixture)) }
 
-      before { FakeWeb.register_uri :get, /\/findNearbyWikipedia\?.*lat=#{latitude}&lng=#{longitude}/, :response => response }
+      before { WebMock.stub_request(:get, /\/findNearbyWikipedia\?.*lat=#{latitude}&lng=#{longitude}/).to_return(body: response) }
       let(:fixture) { "general_motors_centre.xml.http" }
 
       let(:latitude)  { +43.900120387 }
@@ -17,7 +17,7 @@ module Geonames
 
         it "returns WikipediaArticle instances" do
           subject.each do |element|
-            element.should be_a_kind_of WikipediaArticle
+            expect(element).to be_a_kind_of WikipediaArticle
           end
         end
       end

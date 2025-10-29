@@ -1,13 +1,26 @@
 require 'rubygems'
 require 'bundler/setup'
-require 'rspec/autorun'
-
-RSpec.configure do |config|
-  config.mock_with :rspec
+require 'pry'
+require 'simplecov'
+SimpleCov.start do
+  minimum_coverage 100
+  add_filter '/spec/'
+  add_filter '/coverage/'
 end
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f }
+
+RSpec.configure do |config|
+  config.mock_with :rspec
+  config.expect_with :rspec do |expectations|
+    expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+  end
+  config.mock_with :rspec do |mocks|
+    mocks.verify_partial_doubles = true
+  end
+  config.shared_context_metadata_behavior = :apply_to_host_groups
+end
 
 require 'geonames'
