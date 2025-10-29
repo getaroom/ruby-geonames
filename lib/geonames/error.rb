@@ -1,5 +1,21 @@
 module Geonames
   class Error < ::StandardError
+    class AuthorizationException < Error; end
+    class RecordDoesNotExist < Error; end
+    class OtherError < Error; end
+    class DatabaseTimeout < Error; end
+    class InvalidParameter < Error; end
+    class NoResultFound < Error; end
+    class DuplicateException < Error; end
+    class PostalCodeNotFound < Error; end
+    class DailyLimitExceeded < Error; end
+    class HourlyLimitExceeded < Error; end
+    class WeeklyLimitExceeded < Error; end
+    class InvalidInput < Error; end
+    class ServerOverloadedException < Error; end
+    class ServiceNotImplemented < Error; end
+    class Unknown < Error; end
+
     ERROR_CLASSES = {
       10 => AuthorizationException,
       11 => RecordDoesNotExist,
@@ -21,21 +37,5 @@ module Geonames
       klass = ERROR_CLASSES.fetch(code, Unknown)
       klass.new(msg)
     end
-
-    class AuthorizationException < Error; end
-    class RecordDoesNotExist < Error; end
-    class OtherError < Error; end
-    class DatabaseTimeout < Error; end
-    class InvalidParameter < Error; end
-    class NoResultFound < Error; end
-    class DuplicateException < Error; end
-    class PostalCodeNotFound < Error; end
-    class DailyLimitExceeded < Error; end
-    class HourlyLimitExceeded < Error; end
-    class WeeklyLimitExceeded < Error; end
-    class InvalidInput < Error; end
-    class ServerOverloadedException < Error; end
-    class ServiceNotImplemented < Error; end
-    class Unknown < Error; end
   end
 end

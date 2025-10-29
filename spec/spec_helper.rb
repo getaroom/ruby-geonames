@@ -1,6 +1,12 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'pry'
+require 'simplecov'
+SimpleCov.start do
+  minimum_coverage 100
+  add_filter '/spec/'
+  add_filter '/coverage/'
+end
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
